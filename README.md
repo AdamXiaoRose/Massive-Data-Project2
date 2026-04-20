@@ -272,7 +272,5 @@ static files.
 
 ## Authors
 
-- **Xiao Xu** — USCIS data cleaning, employer-level modeling,
-  explainability framing, repository structure.
-- **Y. Zhang** — LCA × Census × rent city-level enrichment and
-  original demand-volume classification analysis.
+- **Xiao Xu** 
+- **Cassie Zhang** 
