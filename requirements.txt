@@ -1,0 +1,10 @@
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+xgboost>=2.0
+matplotlib>=3.7
+pyarrow>=14.0
+
+# optional — distributed-compute variant of the merge stage.
+# Requires Java 8/11/17 at runtime.
+pyspark>=3.5,<4.0
