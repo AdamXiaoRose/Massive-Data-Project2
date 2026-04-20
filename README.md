@@ -33,8 +33,7 @@ are exactly the ones the original USCIS file omits.
 
 Wages, density, population, rent, and labor-market indicators *do*
 carry signal about **how many** H-1B petitions a city generates.
-Zhang's original notebook (`docs/Zhang_stage5.html`) shows that
-bucketing cities into Low / Medium / High petition volume is
+Bucketing cities into Low / Medium / High petition volume is
 classifiable from those economic features (Random Forest + SMOTE,
 trilabel classification). That is a legitimate signal — but it is
 about *demand*, not *approval*.
@@ -168,17 +167,13 @@ any stage can be re-run independently after an edit.
 ├── outputs/
 │   ├── figures/                      # PNGs used in the write-up
 │   └── tables/                       # CSV / JSON / parquet artifacts
-├── docs/                             # GitHub Pages site + archived artifacts
+├── docs/                             # GitHub Pages site
 │   ├── _config.yml                   # Jekyll config (minima theme)
 │   ├── index.md                      # landing page / pitch
 │   ├── findings.md                   # detailed results
 │   ├── methodology.md                # pipeline + modeling doc
 │   ├── proposal.md                   # Phase 2 grant proposal
-│   ├── assets/figures/               # PNGs served by Pages
-│   ├── Paper_XiaoXu.pdf              # original PPOL 5204 paper
-│   ├── PPOL5204_ DS2 Final Project_Xiao Xu.pdf
-│   ├── Xu_Stage5.html                # original notebook (Layer 2)
-│   └── Zhang_stage5.html             # collaborator notebook (Layer 1)
+│   └── assets/figures/               # PNGs served by Pages
 ├── requirements.txt
 └── README.md
 ```
@@ -260,8 +255,7 @@ The GitHub Pages site under `docs/` is the grant-pitch surface:
 - `docs/proposal.md` — 12-month Phase 2 grant proposal.
 
 To publish, enable GitHub Pages on the `docs/` folder of the `main`
-branch. The existing PDFs and HTML notebooks remain accessible as
-static files.
+branch in the repository settings.
 
 ## Data sources
 

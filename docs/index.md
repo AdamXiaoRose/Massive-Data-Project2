@@ -78,7 +78,7 @@ Higher-paying cities are no more or less likely to see approvals.
 ## The three-layer narrative
 
 - **Layer 1** — LCA + Census *can* explain **where H-1B demand clusters**
-  (petition volume by city). See `Zhang_stage5.html`.
+  (petition volume by city).
 - **Layer 2** — USCIS public data *cannot* explain **who gets approved**.
   R² ≤ 0.008 across three model families.
 - **Layer 3** — Joining Layer 1's data into Layer 2's problem does not
@@ -94,13 +94,3 @@ Higher-paying cities are no more or less likely to see approvals.
   grant-fundable follow-on this project motivates.
 - [Source code on GitHub](https://github.com/) — pipeline, scripts,
   PySpark scale-out variant.
-
-## Original course artifacts
-
-- [Paper_XiaoXu.pdf]({{ "/Paper_XiaoXu.pdf" | relative_url }}) — original
-  course paper (pre-merge).
-- [PPOL5204_ DS2 Final Project_Xiao Xu.pdf]({{ "/PPOL5204_%20DS2%20Final%20Project_Xiao%20Xu.pdf" | relative_url }}) — original slides.
-- [Xu_Stage5.html]({{ "/Xu_Stage5.html" | relative_url }}) — original
-  employer-level notebook.
-- [Zhang_stage5.html]({{ "/Zhang_stage5.html" | relative_url }}) —
-  collaborator LCA + Census notebook.
