@@ -1,0 +1,73 @@
+{
+  "n_cities": 3968,
+  "results": [
+    {
+      "spec": "structural",
+      "model": "OLS",
+      "r2": -0.021690301607175222,
+      "mae": 0.041559529470544476,
+      "n_train": 3174,
+      "n_test": 794
+    },
+    {
+      "spec": "structural",
+      "model": "RandomForest",
+      "r2": -0.22176845165024117,
+      "mae": 0.043603533591905094,
+      "n_train": 3174,
+      "n_test": 794
+    },
+    {
+      "spec": "structural",
+      "model": "XGBoost",
+      "r2": -0.3054077732440166,
+      "mae": 0.045623862621022686,
+      "n_train": 3174,
+      "n_test": 794
+    },
+    {
+      "spec": "enriched",
+      "model": "OLS",
+      "r2": -0.01433371729140065,
+      "mae": 0.04117902667052614,
+      "n_train": 3174,
+      "n_test": 794
+    },
+    {
+      "spec": "enriched",
+      "model": "RandomForest",
+      "r2": -0.05518591363833347,
+      "mae": 0.041793768481679504,
+      "n_train": 3174,
+      "n_test": 794
+    },
+    {
+      "spec": "enriched",
+      "model": "XGBoost",
+      "r2": -0.16428791517628993,
+      "mae": 0.0447313899213013,
+      "n_train": 3174,
+      "n_test": 794
+    }
+  ],
+  "delta_r2": [
+    {
+      "model": "OLS",
+      "enriched": -0.01433371729140065,
+      "structural": -0.021690301607175222,
+      "delta": 0.0073565843157745725
+    },
+    {
+      "model": "RandomForest",
+      "enriched": -0.05518591363833347,
+      "structural": -0.22176845165024117,
+      "delta": 0.1665825380119077
+    },
+    {
+      "model": "XGBoost",
+      "enriched": -0.16428791517628993,
+      "structural": -0.3054077732440166,
+      "delta": 0.14111985806772664
+    }
+  ]
+}

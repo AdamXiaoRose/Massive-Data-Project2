@@ -1,0 +1,27 @@
+title: "H-1B Approval: How Much Can Public Data Explain?"
+description: >-
+  A data product investigating whether public datasets can explain
+  H-1B visa approval outcomes, or whether the answer lives in
+  case-level material that the U.S. government never releases.
+author: Xiao Xu & Y. Zhang
+theme: minima
+show_excerpts: true
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Files to exclude from the built site (source code, raw data, etc.).
+# Pages still serves existing PDFs/HTML in docs/ because they aren't excluded.
+exclude:
+  - README.md
+  - requirements.txt
+  - scripts/
+  - data/
+  - outputs/
+  - .gitignore
+
+header_pages:
+  - findings.md
+  - methodology.md
+  - proposal.md
