@@ -267,8 +267,6 @@ static files.
 
 - USCIS Employer Data Hub — H-1B Employer Information (FY2024):
   <https://www.uscis.gov/tools/reports-and-studies/h-1b-employer-data-hub>
-- OFLC LCA disclosure data + U.S. Census ACS + rent indicators, joined
-  city-level by Y. Zhang (see `docs/Zhang_stage5.html`).
 
 ## Authors
 
