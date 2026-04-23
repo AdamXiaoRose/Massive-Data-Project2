@@ -1,0 +1,149 @@
+---
+layout: home
+title: "Overview"
+description: "Can publicly released data explain H-1B visa approval outcomes? A three-layer empirical investigation finds the answer is no — and locates the missing signal inside unreleased case files."
+---
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">PPOL 5204 · Big Data Analytics for Public Policy · Spring 2026</p>
+    <h1>How much can <em>public data</em> explain about H-1B approval?</h1>
+    <p class="hero-lede">
+      A proof-of-concept for a broader policy research program: we ask whether the datasets the U.S. government releases publicly
+      are sufficient to explain <em>who gets approved for an H-1B petition</em> — or whether the answer lives in case files that
+      never leave USCIS servers.
+    </p>
+    <div class="hero-meta">
+      <span class="chip"><strong>Xiao Xu</strong> &amp; <strong>Cassie Zhang</strong></span>
+      <span class="chip">Georgetown · McCourt School of Public Policy</span>
+      <span class="chip">61,452 employer filings · 3,968 cities</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="{{ '/findings.html' | relative_url }}">Read the findings</a>
+      <a class="btn btn-ghost" href="{{ site.github_repo }}" target="_blank" rel="noopener">View repository ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="stats-strip">
+  <div class="wrap">
+    <div class="stat">
+      <div class="stat-num">≤ 0.008<span class="unit">R²</span></div>
+      <div class="stat-label">Best public-data model</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">82<span class="unit">%</span></div>
+      <div class="stat-label">Filings at ≥ 99.9% approval</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">6 / 6</div>
+      <div class="stat-label">Enriched models with R² &lt; 0</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">96.7<span class="unit">%</span></div>
+      <div class="stat-label">USCIS volume covered (city join)</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="thesis">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Thesis</span>
+      <h2>The unexplained variance is structural.</h2>
+      <p>
+        Even after joining the USCIS employer release with OFLC LCA wages and Census local-economy indicators,
+        <strong>no model beats a constant-mean predictor on city-level approval rate.</strong>
+        The ceiling reflects data limitations, not methodological constraints — approval variance lives inside
+        individual case files the government does not release.
+      </p>
+    </div>
+
+    <div class="card-grid">
+      <div class="card layer-card layer-1">
+        <span class="layer-num">01</span>
+        <span class="card-label">Demand · what public data <em>can</em> do</span>
+        <h3>Where H-1B demand clusters</h3>
+        <p>Wages and economic indicators predict <em>petition volume</em> — where filings originate — but not whether they succeed.</p>
+        <a class="card-link" href="{{ '/findings.html' | relative_url }}">Layer 1 results</a>
+      </div>
+
+      <div class="card layer-card layer-2">
+        <span class="layer-num">02</span>
+        <span class="card-label">Group-level · the ceiling appears</span>
+        <h3>USCIS employer data alone</h3>
+        <p>OLS, Random Forest, and XGBoost all converge on R² ≈ 0.008. 82% of filings have ≥ 99.9% approval within groups.</p>
+        <a class="card-link" href="{{ '/findings.html#layer-2' | relative_url }}">Layer 2 results</a>
+      </div>
+
+      <div class="card layer-card layer-3">
+        <span class="layer-num">03</span>
+        <span class="card-label">Enrichment · does joining help?</span>
+        <h3>LCA wages + Census indicators</h3>
+        <p>Adding wages and local-economy data leaves every specification below the constant-mean predictor. The gap is not a feature problem.</p>
+        <a class="card-link" href="{{ '/findings.html#layer-3' | relative_url }}">Layer 3 results</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="evidence" style="background: var(--color-surface-2);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Evidence</span>
+      <h2>Findings at a glance</h2>
+      <p>Three views of the same ceiling: model scores converge at zero, the target is near-degenerate, and enrichment does not rescue the fit.</p>
+    </div>
+
+    <figure class="figure">
+      <img src="{{ '/assets/figures/model_scores.png' | relative_url }}" alt="Test R² and MAE across OLS, Random Forest, and XGBoost for employer-level H-1B approval.">
+      <figcaption><strong>Fig. 1</strong> Across 61,452 employer filings, three model families converge on the same near-zero R². Feature importance is diffuse — no single feature dominates.</figcaption>
+    </figure>
+
+    <figure class="figure">
+      <img src="{{ '/assets/figures/target_distribution.png' | relative_url }}" alt="Distribution of H-1B approval rates across employer filings, showing a spike at 1.0.">
+      <figcaption><strong>Fig. 2</strong> 82% of employer filings sit at ≥ 99.9% approval. There is very little between-group variation for any model to explain.</figcaption>
+    </figure>
+
+    <figure class="figure">
+      <img src="{{ '/assets/figures/enrichment_delta.png' | relative_url }}" alt="Structural vs enriched feature set R² for OLS, RF, XGBoost. All six specifications return negative R².">
+      <figcaption><strong>Fig. 3</strong> Six city-level specifications, all with R² &lt; 0. Tree models' apparent gains (ΔR² ≈ 0.14–0.17) are cured overfit, not new signal. The linear Δ of 0.007 is the honest upper bound.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="read">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">How to read this site</span>
+      <h2>Four documents, one argument</h2>
+    </div>
+
+    <div class="card-grid">
+      <a class="card" href="{{ '/findings.html' | relative_url }}" style="text-decoration:none; color:inherit;">
+        <span class="card-label">01 · Results</span>
+        <h3>Findings</h3>
+        <p>Detailed results across three layers, with model metrics, variance decomposition, and state- and industry-level breakdowns.</p>
+        <span class="card-link">Read findings</span>
+      </a>
+      <a class="card" href="{{ '/methodology.html' | relative_url }}" style="text-decoration:none; color:inherit;">
+        <span class="card-label">02 · How</span>
+        <h3>Methodology</h3>
+        <p>Pipeline architecture, pandas ↔ PySpark parity, modeling choices, data-quality fixes, and full reproducibility instructions.</p>
+        <span class="card-link">Read methodology</span>
+      </a>
+      <a class="card" href="{{ '/proposal.html' | relative_url }}" style="text-decoration:none; color:inherit;">
+        <span class="card-label">03 · Path forward</span>
+        <h3>Phase 2 proposal</h3>
+        <p>A 12-month grant-fundable follow-on: case-level I-129 data, disparate-impact audit, and a cluster-ready pipeline already in place.</p>
+        <span class="card-link">Read proposal</span>
+      </a>
+      <a class="card" href="{{ site.github_repo }}" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
+        <span class="card-label">04 · Code</span>
+        <h3>Source repository</h3>
+        <p>Eight scripts, parquet intermediates, PySpark scale-out variant, and requirements.txt. Everything regenerates deterministically from raw data.</p>
+        <span class="card-link">Open on GitHub</span>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+Your existing 8 PNG figures already live in this folder in your repo:
+
+  approval_by_industry.png
+  approval_by_state.png
+  enrichment_delta.png
+  feature_importance.png
+  model_scores.png
+  residuals.png
+  target_distribution.png
+  wage_vs_approval.png
+
+Keep them here. When you copy the rest of the new docs/ files over the existing
+docs/ folder, do NOT delete this directory — leave the PNGs in place.
+
+You can delete this placeholder file once you've confirmed the figures are here.

@@ -1,0 +1,31 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap footer-wrap">
+    <div class="footer-col">
+      <h4>Project</h4>
+      <p class="footer-tagline">{{ site.tagline }}</p>
+      <p class="footer-meta">{{ site.course }}</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul class="footer-links">
+        {% for item in site.nav %}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Artifacts</h4>
+      <ul class="footer-links">
+        <li><a href="{{ site.github_repo }}" target="_blank" rel="noopener">Source code &amp; pipeline</a></li>
+        <li><a href="{{ site.github_repo }}/tree/main/outputs/figures" target="_blank" rel="noopener">Figures</a></li>
+        <li><a href="{{ site.github_repo }}/tree/main/outputs/tables" target="_blank" rel="noopener">Result tables</a></li>
+        <li><a href="{{ site.github_repo }}/blob/main/requirements.txt" target="_blank" rel="noopener">requirements.txt</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Authors</h4>
+      <p>{{ site.author }}</p>
+      <p class="footer-meta">&copy; 2026 · Research artifact. Data sources are public.</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body class="{% if page.layout %}layout-{{ page.layout }}{% endif %}">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  {% include header.html %}
+  <main id="main" role="main">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
+</html>

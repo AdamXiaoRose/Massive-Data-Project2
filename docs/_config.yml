@@ -1,18 +1,37 @@
 title: "H-1B Approval: How Much Can Public Data Explain?"
+tagline: "A proof-of-concept for explainability limits in U.S. immigration data."
+author: "Xiao Xu & Cassie Zhang"
+institution: "Georgetown University · McCourt School of Public Policy"
+course: "PPOL 5204 · Big Data Analytics for Public Policy · Spring 2026"
+github_repo: "https://github.com/AdamXiaoRose/Massive-Data-Project2"
+
 description: >-
-  A data product investigating whether public datasets can explain
-  H-1B visa approval outcomes, or whether the answer lives in
-  case-level material that the U.S. government never releases.
-author: Xiao Xu & Y. Zhang
-theme: minima
-show_excerpts: true
+  A Big Data Analytics for Public Policy (PPOL 5204) research project
+  investigating whether public datasets can explain H-1B visa approval
+  outcomes, or whether the answer lives in case-level material that the
+  U.S. government never releases.
+
+# Build settings — no external theme; custom layouts under _layouts/.
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  toc_levels: 2..3
 
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
 
-# Files to exclude from the built site (source code, raw data, etc.).
-# Pages still serves existing PDFs/HTML in docs/ because they aren't excluded.
+# Ordered site navigation.
+nav:
+  - { title: "Overview",     url: "/" }
+  - { title: "Findings",     url: "/findings.html" }
+  - { title: "Methodology",  url: "/methodology.html" }
+  - { title: "Phase 2",      url: "/proposal.html" }
+  - { title: "Team",         url: "/team.html" }
+
+# Files to exclude from the built site.
 exclude:
   - README.md
   - requirements.txt
@@ -20,8 +39,6 @@ exclude:
   - data/
   - outputs/
   - .gitignore
-
-header_pages:
-  - findings.md
-  - methodology.md
-  - proposal.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/

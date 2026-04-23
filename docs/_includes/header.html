@@ -1,0 +1,29 @@
+<header class="site-header" role="banner">
+  <div class="wrap header-wrap">
+    <a class="site-brand" href="{{ "/" | relative_url }}">
+      <span class="brand-mark" aria-hidden="true">H1B</span>
+      <span class="brand-text">
+        <span class="brand-title">Public Data &amp; H-1B Approval</span>
+        <span class="brand-sub">{{ site.institution }}</span>
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="Main">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-list">
+        {% for item in site.nav %}
+          {% assign current = false %}
+          {% if page.url == item.url %}{% assign current = true %}{% endif %}
+          {% if item.url != "/" and page.url contains item.url %}{% assign current = true %}{% endif %}
+          <li>
+            <a href="{{ item.url | relative_url }}" {% if current %}class="is-current" aria-current="page"{% endif %}>{{ item.title }}</a>
+          </li>
+        {% endfor %}
+        <li><a class="nav-cta" href="{{ site.github_repo }}" target="_blank" rel="noopener">GitHub ↗</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
